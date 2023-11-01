@@ -1,0 +1,11 @@
+f = [-20; -23; -28; -38; -41; -48; -88; -91];
+intcon = 1:8;
+A = [3 4 5 4 7 8 15 8; 3 3 3 6 5 6 4 11];
+b = [17;13];
+Aeq = [];
+Beq = [];
+lb = zeros(8, 1);
+ub = ones(8, 1);
+[x, fval] = intlinprog(f, intcon, A, b, Aeq, Beq, lb, ub);
+display(x);
+display(-fval);
